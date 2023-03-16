@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "aman",
+      "email": "aman@gmail.com",
+      "password": "dwivedi"
+    },
+    {
+      "id": "2",
+      "username": "eve",
+      "email": "abc@xyz.com",
+      "password": "cityslicka"
+    }
+  ],
+  "hotels": [
+    {
+      "id": 1,
+      "category": "Family",
+      "image_url": "https://www.acaciahotelsmanila.com/wp-content/uploads/2020/09/room-deluxe_70df34c103b85ce7b2b5ff918ab8cf72.jpg",
+      "type_of_room": "AC",
+      "bed_type": "Double",
+      "no_of_persons": "2",
+      "capacity": "3",
+      "cost": "4000",
+      "booked": false
+    },
+    {
+      "id": 2,
+      "category": "deluxe",
+      "image_url": "https://www.acaciahotelsmanila.com/wp-content/uploads/2020/09/room-deluxe_70df34c103b85ce7b2b5ff918ab8cf72.jpg",
+      "type_of_room": "AC",
+      "bed_type": "Double",
+      "no_of_persons": "2",
+      "capacity": "3",
+      "cost": "4000",
+      "booked": false
+    },
+    {
+      "id": "3",
+      "category": "deluxe",
+      "image_url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKcA+wMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAECBwj/xABGEAACAQMDAQUFBgMGBAMJAAABAgMABBEFEiExBhMiQVEyYXGBkRQjQlKhsQfB0RVicoLw8TNTkqIWJdIkNkNUY4OTsuH/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMEAAX/xAAkEQADAAIBBQADAQEBAAAAAAAAAQIDESEEEhMxQSIyUWEFFP/aAAwDAQACEQMRAD8A8ZYKXyo4P4fSsVf1oy3smZg5IUg+vNdzwusrNIoyfxL0NQeRejUsbBCniWsCeM/E1MwAZDXI6t/iNds7t5LVp6NFpttOOhB3fWmaPlRWaTb952ftSR1BB+tZDCYnEb8gng1hb22bFOjbHihZhmmhtjjkZ9Kgmtjjoa5MD9CaRagutant1W1L4VU4+FM5IPLBqv63ZGWdWBx4cVRRFfsJ3VP6gcuoNMzZK9KDLMfMfSpG0+Veh/auRaTA8j9a0yoXohTp+zldxYY2n50SkcpGNg+tE6fGisBKIwM/jbFX/SLTSZoNrQaezkcFph1+lZs/U+P1Oy2LD3/dHnXczAZMJIxULqVIJjcfEV7NHoujmBVaxikYDblJkP7mq92h03SbZWMdjMjY/CQR+hrPH/Q7q04ZWum4/Y81JXdkgj5VIhQkBfOp71oskIj/ADBGKFQO7DwNtHXHnXoJ7WzLrT0WTRtLWcrl0GT+Yc1ejpenaVppvdRdRGoxjI8R8gB51QdI1qW2mXZACR0yKK1bU",
+      "type_of_room": "AC",
+      "bed_type": "Double",
+      "no_of_persons": "2",
+      "capacity": "4",
+      "cost": "4000",
+      "booked": false
+    }
+  ]
+}

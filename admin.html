@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+        <input type="number" id="id" placeholder="id">
+        <input type="text" placeholder="category" id="category">
+        <input type="url" placeholder="Image of room" id="image_url">
+        <input type="text" placeholder="Type of room" id="room_type">
+        <input type="text" placeholder="Bed type" id="bed_type">
+        <input type="text" placeholder="No of adults" id="adults">
+        <input type="text" placeholder="Max capacity" id="capacity">
+        <input type="text" placeholder="Cost per night in Rs" id="cost">
+        <button onclick="PostHot()">Submit</button>
+    
+
+</body>
+</html>
+<script>
+    async function PostHot(){
+        
+        const id=document.getElementById("id").value;
+        const category = document.getElementById("category").value
+        const image_url = document.getElementById("image_url").value
+        const type_of_room = document.getElementById("room_type").value
+        const bed_type = document.getElementById("bed_type").value
+        const no_of_persons = document.getElementById("adults").value
+        const capacity = document.getElementById("capacity").value
+        const cost = document.getElementById("cost").value
+        const booked = false
+
+        const data_to_send = {
+            id,category,image_url,type_of_room,bed_type,no_of_persons,capacity,cost,booked
+        }
+console.log(data_to_send)
+try{
+            let res = await fetch(`http://localhost:3000/hotels`,{
+            method:"POST",
+            body:JSON.stringify(data_to_send),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+
+        let data = await res.json();
+        console.log(data)
+    }
+    catch(error){
+    console.log(error)
+}
+}
+
+
+
+</script>

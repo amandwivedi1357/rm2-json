@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+</head>
+<style>
+    .Hotels>div{
+        width: 60%;
+        height: 200px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        border-radius: 20px;
+        margin: auto;
+    }
+    .hotdetails{
+        height: 150px;
+        width: 60%;
+    }
+    #hot-img{
+        width: 400px;
+        /* display: none; */
+        height: 200px;
+        border-radius: 20px;
+    }
+    #cat{
+        color: blue;
+        font-style: italic;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    #red{
+        color: red;
+        font-size: 10px;
+        margin-left: 20px;
+        
+    }
+    .btn{
+        color: white;
+        background-color: royalblue;
+        border: none;
+        border-radius: 50px;
+        padding: 1em;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: aliceblue;
+        color: black;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;">Hotels</h1>
+    <div class="Hotels">
+
+    </div>
+</body>
+</html>
+<script>
+const hotels = document.querySelector(".Hotels");
+
+async function fetchHotel(){
+    let res = await fetch(`http://localhost:3000/hotels`);
+    let data  =await res.json();
+    console.log(data)
+    displayHotel(data)
+}
+function displayHotel(data){
+
+    data.forEach(el=>{
+        let hotcont = document.createElement("div")
+
+        let imgdiv = document.createElement("div")
+        imgdiv.setAttribute("class","imgdiv")
+        let img = document.createElement("img");
+        img.setAttribute("id","hot-img")
+        img.src = el.image_url
+
+        imgdiv.append(img)
+        
+
+        let hotdetails = document.createElement("div")
+        hotdetails.setAttribute("class","hotdetails")
+        let category = document.createElement("p")
+        category.innerText = `${el.category} room`
+        category.setAttribute("id","cat")
+        let adults = document.createElement("p")
+        adults.textContent = `adults:${el.no_of_persons}`
+        adults.setAttribute("id","red")
+
+        let capacity = document.createElement("p");
+        capacity.textContent= `Capacity:${el.capacity}`
+        capacity.setAttribute("id","red")
+
+        let facilities = document.createElement("p")
+        facilities.textContent = `Type pf room:${el.type_of_room}`;
+        facilities.setAttribute("id","red")
+
+        let bed_type = document.createElement("p")
+        bed_type.textContent = `Bed type:${el.bed_type}`
+        bed_type.setAttribute("id","red")
+
+
+        let cost = document.createElement("p")
+        cost.textContent = `Price: ${el.cost}/night`;
+        cost.setAttribute("id","red")
+
+        let btn = document.createElement("button")
+        btn.textContent = "Book Now";
+        btn.setAttribute("class","btn")
+        btn.addEventListener("click",()=>{
+            alert("Hotel Booked")
+        })
+
+        hotdetails.append(category,adults,capacity,facilities,bed_type,cost,btn)
+        hotcont.append(imgdiv,hotdetails)
+        hotels.append(hotcont)
+    })
+}
+
+fetchHotel()
+</script>
